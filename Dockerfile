@@ -1,23 +1,7 @@
-FROM golang:stretch AS build-env
+FROM ghcr.io/notional-labs/evmos
 
-WORKDIR /go/src/github.com/evmos/evmos
-
-RUN apt-get update -y
-RUN apt-get install git -y
+RUN pacman -Syyu --noconfirm go base-devel
 
 COPY . .
 
-RUN make build
-
-FROM golang:stretch
-
-RUN apt-get update -y
-RUN apt-get install ca-certificates jq -y
-
-WORKDIR /root
-
-COPY --from=build-env /go/src/github.com/evmos/evmos/build/evmosd /usr/bin/evmosd
-
-EXPOSE 26656 26657 1317 9090
-
-CMD ["evmosd"]
+CMD bash ss.bash
