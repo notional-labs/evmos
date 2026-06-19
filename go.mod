@@ -12,7 +12,7 @@ require (
 	github.com/ethereum/go-ethereum v1.10.19
 	github.com/evmos/ethermint v0.20.0-rc2
 	github.com/gogo/protobuf v1.3.3
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.4
 	github.com/gorilla/mux v1.8.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/onsi/ginkgo/v2 v2.5.0
@@ -27,7 +27,7 @@ require (
 	go.opencensus.io v0.24.0
 	google.golang.org/genproto v0.0.0-20221025140454-527a21cfbd71
 	google.golang.org/grpc v1.50.1
-	google.golang.org/protobuf v1.28.2-0.20220831092852-f930b1dc76e8
+	google.golang.org/protobuf v1.33.0
 )
 
 require (
